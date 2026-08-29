@@ -1,0 +1,150 @@
+% !TEX program = xelatex
+% English academic CV template for PhD/MRes applications and research outreach
+% Compiler: XeLaTeX
+\documentclass[11pt,a4paper]{article}
+
+% -- Font settings ------------------------------------------------------------
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}
+    {\setmainfont{Times New Roman}}
+    {\setmainfont{TeX Gyre Termes}}
+
+% -- Page layout --------------------------------------------------------------
+\usepackage{geometry}
+\geometry{a4paper, left=1.5cm, right=1.5cm, top=1.2cm, bottom=1.2cm}
+
+% -- Colors -------------------------------------------------------------------
+\usepackage{xcolor}
+\definecolor{sectioncolor}{RGB}{46,116,181}
+\definecolor{linkcolor}{RGB}{0,112,192}
+\definecolor{textcolor}{RGB}{0,0,0}
+
+% -- Section headings ---------------------------------------------------------
+\usepackage{titlesec}
+\titleformat{\section}
+    {\large\bfseries\color{sectioncolor}}
+    {}
+    {0em}
+    {\uppercase}
+    [\vspace{-0.8em}\rule{\textwidth}{1pt}]
+\titlespacing{\section}{0pt}{0.1em}{0.1em}
+
+% -- Lists --------------------------------------------------------------------
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, nosep, topsep=0.2em, itemsep=0.1em, parsep=0em}
+
+% -- Icons and links ----------------------------------------------------------
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=linkcolor, urlcolor=linkcolor}
+
+% -- Global style -------------------------------------------------------------
+\color{textcolor}
+\linespread{1.15}
+\pagestyle{empty}
+
+% -- Helper commands ----------------------------------------------------------
+\newcommand{\daterange}[1]{{\textbf{#1}}}
+\newcommand{\entrytitle}[1]{{\textbf{#1}}}
+
+\begin{document}
+
+% Replace every placeholder below with your own information.
+
+% -- Contact header -----------------------------------------------------------
+\vspace*{-2.5em}
+\begin{center}
+    {\Huge\bfseries\color{sectioncolor} Your Name} \\[0.8em]
+    {\color{textcolor}\faPhone\enspace +00 000 000 0000}
+    \enspace $\vert$ \enspace
+    {\color{textcolor}\faEnvelope\enspace your.name@example.com}
+    \enspace $\vert$ \enspace
+    \href{https://github.com/your-username}{{\color{textcolor}\faGithub}\enspace{\color{linkcolor}your-username}}
+    \enspace $\vert$ \enspace
+    \href{https://your-site.example}{{\color{textcolor}\faGlobe}\enspace{\color{linkcolor}your-site.example}}
+\end{center}
+
+% -- Education ----------------------------------------------------------------
+\section*{Education}
+\vspace{-0.3em}
+
+\noindent\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
+    \textbf{University Name} & City, Country \\
+    \textbullet\enspace \textit{M.Res./M.Sc. in Your Field} & Sep. 2026 -- Jun. 2028 (Expected) \\
+    \textbf{Previous University} & City, Country \\
+    \textbullet\enspace \textit{B.Eng./B.Sc. in Your Major} & Sep. 2022 -- Jun. 2026 \\
+    \multicolumn{2}{@{}l}{\textbullet\enspace GPA: X.XX/4.00 \enspace (Top XX\%)} \\
+\end{tabular*}
+
+% -- Publications -------------------------------------------------------------
+\section*{Publications}
+\vspace{-0.1em}
+
+\begin{enumerate}[label={[\arabic*]}, labelindent=0pt, leftmargin=*, labelsep=0.45em,
+                  topsep=0.15em, itemsep=0pt, parsep=0pt]
+    \item \textbf{Surname A}, Coauthor B, Coauthor C\textsuperscript{*}. ``Title of Your Published Research Article.'' \textit{Journal Name}, 2026. DOI: \href{https://doi.org/10.0000/example}{10.0000/example}. [JCR Q1, IF: X.X]
+
+    \item Coauthor A, \textbf{Surname B}, Coauthor C\textsuperscript{*}. ``Title of Your Second Research Article.'' \textit{Journal Name}, 2025. DOI: \href{https://doi.org/10.0000/example-2}{10.0000/example-2}. [JCR Q2, IF: X.X]
+
+    \item \textbf{Surname A}, Coauthor B, Coauthor C\textsuperscript{*}. ``Title of a Manuscript Currently Under Review.'' \textit{Target Journal Name}. Under Review. [JCR Q1, IF: X.X]
+
+    \item \textbf{Surname A}, Coauthor B, Coauthor C, Coauthor D\textsuperscript{*}. ``Title of an Additional Research Article or Conference Paper.'' \textit{Journal or Conference Name}. Under Review. [JCR Q1, IF: X.X]
+
+    \item Coauthor A, Coauthor B, \textbf{Surname C}, Coauthor D\textsuperscript{*}. ``Title of a Collaborative Research Manuscript.'' \textit{Target Journal Name}. Under Review. [JCR Q2, IF: X.X]
+\end{enumerate}
+
+{\footnotesize\textsuperscript{*}Corresponding author.}
+
+% -- Research experience ------------------------------------------------------
+\section*{Research Experience}
+\vspace{-0.1em}
+
+\noindent
+\entrytitle{Research Project or Thesis Title}
+
+\par\noindent
+\textit{Undergraduate/Master's Thesis or Research Programme}
+\hfill \daterange{Sep. 2025 -- Jun. 2026}
+
+\begin{itemize}[label={\textbullet}, labelindent=0pt, leftmargin=*, labelsep=0.45em,
+                topsep=0.15em, itemsep=0pt, parsep=0pt]
+    \item Completed a research project covering problem identification, literature review, methodology design, experimental evaluation, and manuscript preparation.
+    \item Developed a method or system that improved a measurable outcome; validated the approach using appropriate analytical tools, experiments, and baseline comparisons.
+\end{itemize}
+
+\noindent
+\entrytitle{Second Research Project Title}
+
+\par\noindent
+\textit{National, University, or Laboratory Research Programme}
+\hfill \daterange{Jan. 2025 -- Present}
+
+\begin{itemize}[label={\textbullet}, labelindent=0pt, leftmargin=*, labelsep=0.45em,
+                topsep=0.15em, itemsep=0pt, parsep=0pt]
+    \item Designed and implemented a research prototype addressing a clearly defined problem, with emphasis on methodological novelty and reproducibility.
+    \item Conducted theoretical or empirical analysis and evaluated performance through simulations, experiments, or real-world datasets.
+\end{itemize}
+
+% -- Honors and awards --------------------------------------------------------
+\section*{Honors \& Awards}
+\vspace{-0.1em}
+
+\begin{itemize}[label={\textbullet}, labelindent=0pt, leftmargin=*, labelsep=0.45em,
+                topsep=0.15em, itemsep=0pt, parsep=0pt]
+    \item Academic or Research Excellence Award \hfill Jun. 2026
+    \item First-Class Scholarship at University Name (Top X\%) \hfill 2025, 2026
+    \item First Prize, International/National Research Competition \hfill Sep. 2024
+    \item Third Prize, National Engineering or Modeling Competition \hfill May 2024
+\end{itemize}
+
+% -- Skills -------------------------------------------------------------------
+\section*{Skills}
+\vspace{-0.1em}
+
+\noindent
+\textbf{Technical Skills:} Python, C/C++, MATLAB, Linux, SQL, Docker, Git, \LaTeX.
+
+\noindent
+\textbf{Languages:} First Language (native); English (IELTS/TOEFL score).
+
+\end{document}
