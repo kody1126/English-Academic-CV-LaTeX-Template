@@ -12,22 +12,26 @@
 
 % -- Page layout --------------------------------------------------------------
 \usepackage{geometry}
+% Adjust these four values to change the page margins.
 \geometry{a4paper, left=1.5cm, right=1.5cm, top=1.2cm, bottom=1.2cm}
 
 % -- Colors -------------------------------------------------------------------
 \usepackage{xcolor}
+% Section headings, clickable links, and normal body text, respectively.
 \definecolor{sectioncolor}{RGB}{46,116,181}
 \definecolor{linkcolor}{RGB}{0,112,192}
 \definecolor{textcolor}{RGB}{0,0,0}
 
 % -- Section headings ---------------------------------------------------------
 \usepackage{titlesec}
+% Font style for section titles; the final bracket adds the horizontal rule.
 \titleformat{\section}
     {\large\bfseries\color{sectioncolor}}
     {}
     {0em}
     {\uppercase}
     [\vspace{-0.8em}\rule{\textwidth}{1pt}]
+% {left indent}{space before}{space after}; adjust for tighter or looser sections.
 \titlespacing{\section}{0pt}{0.1em}{0.1em}
 
 % -- Lists --------------------------------------------------------------------
@@ -41,11 +45,14 @@
 
 % -- Global style -------------------------------------------------------------
 \color{textcolor}
+% Increase or decrease this value to adjust overall line spacing.
 \linespread{1.10}
 \pagestyle{empty}
 
 % -- Helper commands ----------------------------------------------------------
+% Use \daterange{...} for bold dates aligned at the right of an entry.
 \newcommand{\daterange}[1]{{\textbf{#1}}}
+% Use \entrytitle{...} for bold project or thesis titles.
 \newcommand{\entrytitle}[1]{{\textbf{#1}}}
 
 \begin{document}
