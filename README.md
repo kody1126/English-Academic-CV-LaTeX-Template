@@ -1,75 +1,50 @@
 # English Academic CV LaTeX Template
 
-A clean, compact, one-page academic CV template designed for:
+## Overview
 
-- PhD and MRes applications
-- contacting prospective supervisors and research groups
-- research internship and scholarship applications
-- early-career researchers who want to highlight publications and research experience
+A clean, one-page academic CV template for PhD, MRes, and research-focused applications. It uses XeLaTeX and Times New Roman when available, with TeX Gyre Termes as a fallback.
 
-The template uses XeLaTeX, an A4 layout, a publication-focused structure, and a restrained blue academic style.
+It is suitable for:
 
-![Template preview](preview.png)
+1. PhD, MRes, or research master's applications.
+2. Contacting prospective supervisors and research groups.
+3. Research internships, scholarships, and research assistant applications.
 
-## Repository contents
+The template includes sections for education, publications, research experience, honors, and skills. The example content is fictional placeholder text; replace it with your own verified information before use.
 
-- `academic-cv-template.tex` — editable XeLaTeX source
-- `academic-cv-template.pdf` — compiled example CV
-- `preview.png` — README preview image
-- `LICENSE` — MIT License
+## Files
 
-All content in the example CV is fictional placeholder text. Replace it with your own verified information before use.
+```text
+English-Academic-CV-LaTeX-Template/
+├── academic-cv-template.tex    # CV source file
+├── academic-cv-template.pdf    # Compiled example PDF
+├── preview.png                 # Preview image
+├── LICENSE
+└── README.md
+```
 
-## Features
-
-- single-page academic layout
-- sections for education, publications, research experience, honors, and skills
-- right-aligned dates and locations
-- clickable GitHub, website, and DOI links
-- no profile photo or external image assets
-- Times New Roman when installed, with TeX Gyre Termes as an open fallback
-- suitable for Overleaf and local TeX installations
-
-## Quick start
+## How to use
 
 ### Overleaf
 
-1. Download or clone this repository.
-2. Upload the files to a new Overleaf project.
+1. Download the repository as a ZIP file.
+2. Create a new project in [Overleaf](https://www.overleaf.com/) and upload the ZIP file.
 3. Set the compiler to **XeLaTeX**.
 4. Edit `academic-cv-template.tex` and recompile.
 
-### Local compilation
+### VS Code
 
-Install a recent TeX Live or MiKTeX distribution, then run:
+1. Open the project folder in VS Code.
+2. Install a TeX distribution and the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension.
+3. Compile `academic-cv-template.tex` with **XeLaTeX**.
+4. Replace the placeholders with your own information.
 
-```bash
-xelatex academic-cv-template.tex
-xelatex academic-cv-template.tex
-```
+## Preview
 
-The second pass ensures that links and PDF metadata are fully refreshed.
+[View the example PDF](./academic-cv-template.pdf)
 
-## Customization checklist
-
-Search the source file for the following placeholders:
-
-- `Your Name`
-- `your.name@example.com`
-- `your-username`
-- `your-site.example`
-- `University Name`
-- `Surname A`
-- `X.XX`, `XX%`, and `X.X`
-
-For publications, keep the official author order and article title. Replace the example DOI URLs as well as their visible text.
-
-If the CV becomes longer than one page, prioritize the information most relevant to the target supervisor or programme. You can also duplicate or remove publication and research entries as needed.
-
-## Privacy reminder
-
-Before publishing your edited CV, search the source and PDF for phone numbers, personal email addresses, student IDs, home addresses, and any confidential manuscript details you do not intend to disclose.
+![Academic CV template preview](./preview.png)
 
 ## License
 
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
